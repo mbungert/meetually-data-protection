@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Datenschutzerklaerung | Meetually</title>
+  <meta name="description" content="Datenschutzerklaerung fuer die App Meetually">
+  <style>
+    :root {
+      --bg: #f4f1ea;
+      --card: #fffdf8;
+      --text: #1f1d1a;
+      --muted: #666055;
+      --line: #ded6c8;
+      --accent: #0f766e;
+      --warn: #92400e;
+      --warn-bg: #fff7ed;
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; }
+    body {
+      font-family: ui-serif, Georgia, Cambria, "Times New Roman", serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at 10% 0%, rgba(15,118,110,0.08), transparent 40%),
+        radial-gradient(circle at 100% 20%, rgba(146,64,14,0.08), transparent 35%),
+        var(--bg);
+      line-height: 1.55;
+    }
+    .wrap {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 24px 16px 48px;
+    }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 24px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+    }
+    h1, h2, h3 {
+      line-height: 1.2;
+      margin-top: 0;
+      color: #171411;
+    }
+    h1 {
+      font-size: clamp(1.6rem, 2.5vw, 2.2rem);
+      margin-bottom: 8px;
+    }
+    h2 {
+      margin-top: 28px;
+      font-size: 1.2rem;
+      border-top: 1px solid var(--line);
+      padding-top: 18px;
+    }
+    h3 {
+      margin-top: 20px;
+      font-size: 1rem;
+    }
+    p { margin: 10px 0; }
+    ul { margin: 8px 0 12px 20px; }
+    li { margin: 4px 0; }
+    .meta { color: var(--muted); margin-bottom: 12px; }
+    .notice {
+      border: 1px solid #f0d7b0;
+      background: var(--warn-bg);
+      color: var(--warn);
+      border-radius: 10px;
+      padding: 12px 14px;
+      margin: 14px 0 18px;
+    }
+    .small {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+    a { color: var(--accent); }
+    code {
+      background: #f3efe8;
+      border: 1px solid var(--line);
+      border-radius: 4px;
+      padding: 0 4px;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 0.92em;
+    }
+    @media (max-width: 640px) {
+      .card { padding: 18px; border-radius: 12px; }
+      .wrap { padding: 14px 10px 28px; }
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <section class="card">
+      <h1>Datenschutzerklaerung fuer die App "Meetually"</h1>
+      <p class="meta">Stand: 25.02.2026</p>
+
+      <div class="notice">
+        Hinweis: Dieser Text ist ein technischer, codebasierter Entwurf und keine Rechtsberatung.
+        Bitte vor Veroeffentlichung rechtlich pruefen lassen.
+      </div>
+
+      <h2>1. Verantwortlicher</h2>
+      <p>Verantwortlich fuer die Datenverarbeitung im Zusammenhang mit der App "Meetually" ist:</p>
+      <ul>
+        <li><strong>Michael Bungert</strong></li>
+        <li><strong>mbungert90@gmail.com</strong></li>
+      </ul>
+
+      <h2>2. Worum es in Meetually geht</h2>
+      <p>
+        Meetually ist eine App zur Planung gemeinsamer Treffen. Nutzerinnen und Nutzer koennen Gruppen
+        und Freundschaften verwalten, Treffen planen, Terminvorschlaege abstimmen, optionale Event-Details
+        hinterlegen und Benachrichtigungen erhalten.
+      </p>
+
+      <h2>3. Welche Daten wir verarbeiten</h2>
+      <p>Wir verarbeiten nur Daten, die fuer die Nutzung der App-Funktionen erforderlich sind oder die Sie freiwillig bereitstellen.</p>
+
+      <h3>3.1 Konto- und Anmeldedaten</h3>
+      <p>Bei der Anmeldung ueber E-Mail (Magic Link / Passwort) oder Social Login (Apple / Google) verarbeiten wir insbesondere:</p>
+      <ul>
+        <li>E-Mail-Adresse</li>
+        <li>interne Benutzer-ID (UUID)</li>
+        <li>Login-Provider (z. B. Apple, Google, E-Mail)</li>
+        <li>optional vom Provider uebermittelte Profildaten (z. B. Name), soweit verfuegbar</li>
+      </ul>
+      <p>Zusätzlich speichert die App lokal eine Anmeldesitzung (Session), die vom eingesetzten Auth-SDK im iOS Keychain verwaltet wird.</p>
+
+      <h3>3.2 Profildaten</h3>
+      <p>Wir verarbeiten:</p>
+      <ul>
+        <li>Anzeigename (<code>display_name</code>)</li>
+        <li>optional Profilbild (Avatar)</li>
+      </ul>
+      <p>
+        Profilbilder werden in einem nicht oeffentlichen Speicherbereich (privater Storage-Bucket) gespeichert und
+        innerhalb der App ueber zeitlich begrenzte Signatur-URLs geladen. Nach dem aktuellen technischen Stand koennen
+        Profilbilder von angemeldeten Nutzerinnen und Nutzern gelesen werden (nicht oeffentlich ohne Anmeldung).
+      </p>
+
+      <h3>3.3 Gruppendaten und Mitgliedschaften</h3>
+      <p>Zur Bereitstellung der Gruppenfunktion verarbeiten wir:</p>
+      <ul>
+        <li>Gruppenname</li>
+        <li>Kadenz-/Intervall-Einstellung (z. B. woechentlich, 2-woechentlich)</li>
+        <li>Ersteller der Gruppe</li>
+        <li>Gruppenmitgliedschaften inkl. Rolle (z. B. Admin/Mitglied)</li>
+        <li>Beitrittszeitpunkte</li>
+        <li>optional Gruppenbild (Avatar)</li>
+      </ul>
+      <p>
+        Gruppenbilder werden ebenfalls in einem nicht oeffentlichen Speicherbereich gespeichert. Nach dem aktuellen
+        technischen Stand koennen Gruppenbilder von angemeldeten Nutzerinnen und Nutzern gelesen werden (nicht oeffentlich ohne Anmeldung).
+      </p>
+
+      <h3>3.4 Freundschaften und Freundschaftsanfragen</h3>
+      <p>Fuer die Freundesfunktion verarbeiten wir:</p>
+      <ul>
+        <li>Freundschaftsanfragen (Anfragender, Empfaenger, Status)</li>
+        <li>Freundschaften (inkl. Status)</li>
+        <li>optionale persoenliche Kadenz-Einstellung pro Freundschaft</li>
+      </ul>
+
+      <h3>3.5 Event- und Abstimmungsdaten</h3>
+      <p>Zur Planung und Durchfuehrung von Treffen verarbeiten wir:</p>
+      <ul>
+        <li>Events (fuer Gruppen oder Freundschaften)</li>
+        <li>vorgeschlagene Termine (Datum/Uhrzeit)</li>
+        <li>Abstimmungen/Votes zu Terminvorschlaegen (Ja/Nein)</li>
+        <li>Event-Status (z. B. offen, finalisiert, abgesagt, "hat stattgefunden")</li>
+        <li>Host-/Gastgeber-Zuordnung</li>
+        <li>Zeitstempel (z. B. erstellt, finalisiert)</li>
+        <li>optionale Event-Details (Name, Beschreibung, Ort/Location)</li>
+      </ul>
+
+      <h3>3.6 Kontaktsynchronisierung (optional)</h3>
+      <p>Wenn Sie die Kontaktfunktion nutzen, kann die App auf Ihre Kontakte zugreifen (nur nach Ihrer Freigabe im iPhone).</p>
+      <p>Wichtig:</p>
+      <ul>
+        <li>Telefonnummern aus Ihrem Adressbuch werden auf dem Geraet verarbeitet.</li>
+        <li>Telefonnummern werden normalisiert und per SHA-256 gehasht.</li>
+        <li>An unsere Server werden nur Hashwerte, nicht die Klartext-Telefonnummern, uebertragen.</li>
+      </ul>
+      <p>Wenn Sie selbst ueber Ihre Telefonnummer gefunden werden moechten, kann ein Hash Ihrer eigenen Telefonnummer serverseitig gespeichert werden.</p>
+
+      <h3>3.7 Suche nach Nutzerinnen/Nutzern</h3>
+      <p>
+        Sie koennen andere Nutzer ueber Namen oder E-Mail suchen. Hierzu wird Ihre Suchanfrage an den Server uebermittelt,
+        um passende Treffer zu berechnen.
+      </p>
+      <p class="small">
+        Nach aktuellem Stand des geprueften Codes ist keine separate dauerhafte Protokollierung von Suchbegriffen implementiert.
+        Server-/Infrastruktur-Logs (z. B. beim Hostinganbieter) koennen hiervon abweichen.
+      </p>
+
+      <h3>3.8 Push-Benachrichtigungen (optional)</h3>
+      <p>Wenn Sie Push-Benachrichtigungen erlauben, verarbeiten wir:</p>
+      <ul>
+        <li>APNs-Geraetetoken (Apple Push Notification Service)</li>
+        <li>Plattform (iOS)</li>
+      </ul>
+      <p>Zur Steuerung und Begrenzung von Benachrichtigungen speichern wir ausserdem ein Benachrichtigungsprotokoll mit:</p>
+      <ul>
+        <li>Nutzer-ID</li>
+        <li>Benachrichtigungstyp (z. B. Abstimmungserinnerung, Host-Erinnerung, Freundschafts-Kadenz-Erinnerung)</li>
+        <li>Referenz-ID (z. B. Gruppe oder Freundschaft, falls relevant)</li>
+        <li>Versandzeitpunkt</li>
+      </ul>
+
+      <h3>3.9 Lokale Zwischenspeicherung auf dem Geraet</h3>
+      <p>Zur Verbesserung der Performance koennen in der App lokal zwischengespeichert werden:</p>
+      <ul>
+        <li>Auth-Session im iOS Keychain</li>
+        <li>temporaere signierte Bild-URLs (im App-Prozessspeicher)</li>
+        <li>Bilddaten-Cache ueber iOS/<code>URLSession</code> (<code>URLCache</code>), insbesondere fuer Avatare</li>
+      </ul>
+
+      <h2>4. Zwecke der Verarbeitung</h2>
+      <ul>
+        <li>Bereitstellung der Anmeldung und Nutzerkonten</li>
+        <li>Anzeige und Verwaltung Ihres Profils</li>
+        <li>Planung und Koordination von Treffen</li>
+        <li>Durchfuehrung von Abstimmungen</li>
+        <li>Verwaltung von Gruppen und Freundschaften</li>
+        <li>optionale kontakt-basierte Freundesuche (nur mit Ihrer Freigabe)</li>
+        <li>Versand von Push-Benachrichtigungen (nur mit Ihrer Freigabe)</li>
+        <li>Betriebssicherheit, Missbrauchsvermeidung und Fehlerbehebung</li>
+      </ul>
+
+      <h2>5. Rechtsgrundlagen (DSGVO)</h2>
+      <p>Soweit die DSGVO anwendbar ist, stuetzen wir die Verarbeitung insbesondere auf:</p>
+      <ul>
+        <li>Art. 6 Abs. 1 lit. b DSGVO (Vertrag / vorvertragliche Massnahmen)</li>
+        <li>Art. 6 Abs. 1 lit. a DSGVO (Einwilligung) fuer optionale Kontakte-Freigabe und Push-Benachrichtigungen</li>
+        <li>Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse) fuer sicheren Betrieb und technische Stabilitaet</li>
+      </ul>
+
+      <h2>6. Empfaenger / Dienstleister</h2>
+      <p>Zur Bereitstellung von Meetually nutzen wir technische Dienstleister (je nach Rolle als Auftragsverarbeiter oder eigenstaendige Verantwortliche):</p>
+      <ul>
+        <li>Supabase (Authentifizierung, Datenbank, Dateispeicher/Storage, Edge Functions)</li>
+        <li>Apple Push Notification Service (APNs) fuer den Versand von Push-Benachrichtigungen</li>
+        <li>Apple / Google (nur wenn Sie diese Login-Optionen verwenden)</li>
+      </ul>
+      <p>Bei Push-Benachrichtigungen werden das Geraetetoken und Benachrichtigungsdaten an APNs uebermittelt, damit Apple die Zustellung an Ihr Geraet vornehmen kann.</p>
+
+      <h2>7. Drittlanduebermittlungen</h2>
+      <p>Je nach eingesetzten Diensten kann eine Verarbeitung ausserhalb der EU/des EWR stattfinden.</p>
+      <ul>
+        <li><strong>Supabase-Projektregion:</strong> EU</li>
+        <li><strong>Ggf. eingesetzte Garantien:</strong> Bitte ergaenzen, falls erforderlich</li>
+      </ul>
+
+      <h2>8. Speicherdauer</h2>
+      <p>
+        Wir speichern personenbezogene Daten grundsaetzlich nur so lange, wie dies fuer die genannten Zwecke erforderlich ist
+        oder gesetzliche Aufbewahrungspflichten bestehen.
+      </p>
+      <p>
+        Nach dem aktuellen technischen Stand ist keine allgemeine automatische Loeschfrist fuer Nutzer-, Freundschafts-,
+        Event- oder Benachrichtigungsdaten implementiert.
+      </p>
+      <p><strong>Aktuell sind keine festen Loeschfristen definiert.</strong></p>
+
+      <h2>9. Ihre Rechte</h2>
+      <p>Sie haben nach Massgabe der gesetzlichen Voraussetzungen insbesondere folgende Rechte:</p>
+      <ul>
+        <li>Auskunft (Art. 15 DSGVO)</li>
+        <li>Berichtigung (Art. 16 DSGVO)</li>
+        <li>Loeschung (Art. 17 DSGVO)</li>
+        <li>Einschraenkung der Verarbeitung (Art. 18 DSGVO)</li>
+        <li>Datenuebertragbarkeit (Art. 20 DSGVO)</li>
+        <li>Widerspruch (Art. 21 DSGVO)</li>
+        <li>Widerruf erteilter Einwilligungen mit Wirkung fuer die Zukunft (Art. 7 Abs. 3 DSGVO)</li>
+      </ul>
+      <p>Sie haben ausserdem das Recht, sich bei einer Datenschutzaufsichtsbehoerde zu beschweren.</p>
+
+      <h2>10. Freiwillige Berechtigungen und Widerruf</h2>
+      <h3>10.1 Kontakte</h3>
+      <p>Die Kontakte-Funktion ist freiwillig. Sie koennen die Berechtigung jederzeit in den iOS-Einstellungen widerrufen:</p>
+      <ul>
+        <li><strong>Einstellungen &gt; Datenschutz &amp; Sicherheit &gt; Kontakte</strong></li>
+      </ul>
+      <h3>10.2 Push-Benachrichtigungen</h3>
+      <p>Push-Benachrichtigungen sind freiwillig. Sie koennen diese jederzeit in den iOS-Einstellungen deaktivieren:</p>
+      <ul>
+        <li><strong>Einstellungen &gt; Mitteilungen &gt; Meetually</strong></li>
+      </ul>
+
+      <h2>11. Datensicherheit</h2>
+      <p>Wir setzen technische und organisatorische Massnahmen ein, um personenbezogene Daten angemessen zu schuetzen. Nach dem geprueften technischen Stand gehoeren dazu insbesondere:</p>
+      <ul>
+        <li>Authentifizierung ueber Supabase Auth</li>
+        <li>Zugriffsbeschraenkungen ueber Row Level Security (RLS) in der Datenbank</li>
+        <li>private Storage-Buckets fuer Profil- und Gruppenbilder</li>
+        <li>zeitlich begrenzte signierte URLs fuer den Bildabruf</li>
+      </ul>
+
+      <h2>12. Keine Werbe-Tracking-SDKs (nach geprueftem Stand)</h2>
+      <p>
+        Im geprueften iOS-Code wurden keine typischen Werbe-/Tracking-SDKs (z. B. Firebase Analytics,
+        Crashlytics, Ad-SDKs) verwendet.
+      </p>
+      <p class="small">Hinweis: Diese Aussage bezieht sich auf den geprueften Repository-Stand vom 25.02.2026.</p>
+
+      <h2>13. Kontakt zum Datenschutz</h2>
+      <p>Bei Fragen zum Datenschutz wenden Sie sich bitte an:</p>
+      <ul>
+        <li><strong>Michael Bungert, mbungert90@gmail.com</strong></li>
+      </ul>
+    </section>
+  </main>
+</body>
+</html>
